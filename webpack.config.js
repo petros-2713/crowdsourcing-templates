@@ -74,8 +74,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
+      $: require.resolve('jquery'),
+      jQuery: require.resolve('jquery')
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css"
