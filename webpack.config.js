@@ -1,11 +1,15 @@
 // webpack v4
 // Webpack uses this to work with directories
 const path = require('path'); // update 23.12.2018
-const nodeExternals = require("webpack-node-externals");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -69,6 +73,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     new MiniCssExtractPlugin({
       filename: "bundle.css"
     }), new HtmlWebpackPlugin({
