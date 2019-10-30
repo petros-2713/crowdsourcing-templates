@@ -16,7 +16,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   // Path to your entry point. From this file Webpack will begin his work
   entry: {
-    main: './src/index.js'
+    main: './src/js/index.js'
   },
   // Path and filename of your result bundle.
   // Webpack will bundle all JavaScript into this file
