@@ -76,6 +76,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: require.resolve('jquery'),
             jQuery: require.resolve('jquery')
+            
         }),
         new MiniCssExtractPlugin({
             filename: "bundle.css"
@@ -89,5 +90,8 @@ module.exports = {
             from: './src/images',
             to: 'img'
         }])
-    ]
+    ],
+    externals: {
+        csv: 'jQuery-csv'
+      }
 };
