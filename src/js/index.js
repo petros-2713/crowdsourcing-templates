@@ -20,6 +20,7 @@ function LoadTask(task, deferred) {
     var MyImage = new Image(256, 256);
 
     MyImage.src = "img/heigit_1/64962_120509_18.jpg";
+    MyImage.className = "img-thumbnail";
     var i = 0;
 
 
